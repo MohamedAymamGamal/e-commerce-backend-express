@@ -11,7 +11,7 @@ const app = express();
 const port = 5001;
 app.use(express.json());
 mongoose
-  .connect(process.env.DATA_BASE || "")
+  .connect("mongodb://127.0.0.1:27017/commerce")
   .then(() => console.log("Connected!"))
   .catch((err) => console.log("failed to Connect", err));
 
